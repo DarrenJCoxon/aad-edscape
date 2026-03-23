@@ -375,3 +375,13 @@ Your web browser will cache (store) old code. To remove the old code, it’s CMD
 #### If that doesn’t work, remove all cache and cookies
 
 Sometimes the old code will cache so hard you need to reset the entire thing. To do this - View - Developer Tools - Application - Storage - Clear site data. Tick include third party cookies.
+
+## 5. Buying a web address and publishing your beautiful site
+
+1. Head over to [namecheap.com](http://namecheap.com) and buy your domain name of choice. TOP TIP - avoid .com unless it’s a weird name or you’re very wealthy. 
+2. Inside the Namecheap domain name dashboard, choose Manage - Advanced DNS. You’ll be back here soon.
+3. Now, head to Vercel, choose your project, then Domains from the left menu. Choose Add Existing, then add the URL you just bought, without www or https. Tick the box that suggests adding www as well.
+4. Now, choose edit, and grab the A record number. It will have a @ and will look like this - 214.150.1.1 or similar. 
+5. Back over into Namecheap advanced DNS, inside Host records, Add new record - A Record. Host will be @ and add the number to Value. TTL Automatic. 
+6. If Vercel gives you a CNAME record, grab that as well and add to Namecheap. Add record - CNAME. Host will be www and value will look something like this: [745e2b053ba5a2a5.vercel-dns-014.com](http://745e2b064ba5a2a4.vercel-dns-016.com/). TTL Automatic.
+7. That’s it! Go back to Vercel and after a few minutes your new site name will be added to Vercel.
