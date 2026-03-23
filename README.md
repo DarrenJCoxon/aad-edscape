@@ -15,7 +15,7 @@ This takes a bit of getting used to. When we first start, we might feel that we 
 
 The first thing we will do is set up our coding environment before we begin to code. This is important, and should give you the assurance that what we're going to be doing is safe and secure. It means that you can be a lot more experimental and really push things further, knowing that Claude can't really do anything too bad.
 
-**IMPORTANT**: A lot of what we will do this morning will not be coding - we are going to ensure we have the optimal environment to get the most out of Claude Code.
+> **IMPORTANT**: A lot of what we will do this morning will not be coding - we are going to ensure we have the optimal environment to get the most out of Claude Code.
 
 ## 1. Setting up the environment
 
