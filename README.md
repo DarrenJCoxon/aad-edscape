@@ -376,7 +376,7 @@ Your web browser will cache (store) old code. To remove the old code, it’s CMD
 
 Sometimes the old code will cache so hard you need to reset the entire thing. To do this - View - Developer Tools - Application - Storage - Clear site data. Tick include third party cookies.
 
-## 5. Buying a web address and publishing your beautiful site
+## 5. Buying a web address and adding to your beautiful site
 
 1. Head over to [namecheap.com](http://namecheap.com) and buy your domain name of choice. TOP TIP - avoid .com unless it’s a weird name or you’re very wealthy. 
 2. Inside the Namecheap domain name dashboard, choose Manage - Advanced DNS. You’ll be back here soon.
