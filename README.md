@@ -61,23 +61,19 @@ Begin by setting up a folder, dragging it into VS Code, and ensuring Claude Code
 
 ### TRY: build a simple homepage without plan:
 
-<aside>
-👨‍💻
+```
+Create a file called index.html with a page that says Good Morning and shows today’s date.
+Make the page fun with some interactive features.
 
-Create a file called index.html with a page that says Good Morning and shows today’s date. Make the page fun with some interactive features.
-
-</aside>
+```
 
 Now with plan -note that you can choose Plan, or just know that using the word plan will automatically switch Claude to plan mode. 
 
-<aside>
-👨‍💻
+```
+I want to plan a homepage - index.html that says Good Morning and shows today’s date.
+I want to make the page fun with some interactive features. Return your plan for the optimal way to achieve this.
 
-I want to plan a homepage - index.html that says Good Morning and shows today’s date. I want to make the page fun with some interactive features. Return your plan for the optimal way to achieve this.
-
-</aside>
-
-Show both versions. 
+```
 
 ## 2. Building a simple next.js app
 
@@ -93,12 +89,12 @@ For us it is no different - we just tell Claude that’s what we want and it set
 
 Let’s create a new project folder - Magic Teacher. Drag into a new VS Code window and enable Claude. 
 
-<aside>
-👨‍💻
-
-Create a Next.js app with a landing page, nav bar, and card layout. This app will be called Magic Teacher. Focus the landing page on [how teachers can save time with AI. Bring in some humorous ideas - have fun with this!] Make the landing page look like something build by Microsoft Frontpage in the 1990s.
-
-</aside>
+```
+Create a Next.js app with a landing page, nav bar, and card layout. This app will be called Magic Teacher.
+Focus the landing page on [how teachers can save time with AI.
+Bring in some humorous ideas - have fun with this!]
+Make the landing page look like something build by Microsoft Frontpage in the 1990s.
+```
 
 1. See what Claude built - an entire scaffold - this is one of the real benefits of using Next.js
 2. Look at the basic files - just high level explanation. 
@@ -107,14 +103,9 @@ Create a Next.js app with a landing page, nav bar, and card layout. This app wil
 5. Here’s mine - https://edskills-test1.vercel.app/
 6. Have a play - choose a theme for your landing page and a style. Then we can share and compare. 
 
-<aside>
-⚠️
-
 **Important note:**
 
 Coding with AI does involve some waiting time. This is because Claude will take time to code everything you ask. Be prepared for this today and in general. It is not instant! 
-
-</aside>
 
 ### 2.2 Committing your code to Github and deploying on Vercel
 
@@ -124,14 +115,10 @@ Now we have a beautiful next.js site, let’s get it committed and deployed.
 2. Enable Github plugin in Claude - /plugin then toggle on 
 3. Either - manually create the Github repo, or ask Claude to do it - make it either public or private and give it a name. 
 4. Ask Claude to commit the page to git. If manual setup, give Claude the Git URL. Check the Repo to ensure committed. Specify the Main branch - this is the default, front-facing version of your website. It is important to have Main set up as we will be branching from this, or creating versions:
-
-<aside>
-👨‍💻
-
-Now, commit this codebase to Github to the Main branch. Create the repo with the name [project-name]. Ensure the repo is Private. 
-
-</aside>
-
+```
+Now, commit this codebase to Github to the Main branch. 
+Create the repo with the name [project-name]. Ensure the repo is Private. 
+```
 1. Head to Vercel. Ensure signed up using Git credentials. Choose New - Project
 2. Connect Vercel to Github, add the repo, deploy
 3. Now you have a beautiful homepage!
@@ -155,25 +142,19 @@ There are two ways to do this. Either create the pull request (PR) manually, or 
 This is a critical workflow and one you need to lock down from the start. Claude (and you) will make mistakes. You need a rewind button. 
 
 Before you begin the next feature, ask Claude to set up a new git branch:
-
-<aside>
-👨‍💻
-
+```
 Now, start a new feature branch. Call it supabase-and-chatbot.
-
-</aside>
-
+```
 ### 2.4 Adding a second page with authentication
 
 Now we add simple auth. There are lots of options, but I prefer using Next.js native auth. It’s simple to set up and Claude knows it well. Notice how at this stage I am simply describing what I want, and where. Not too specific, allowing Claude to make some of those choices. Later we will lock this down more. 
-
-<aside>
-👨‍💻
-
-We will now add a second page to the site, which is a private members area for VIP teachers only. This will be hidden behind user authentication. We will use next auth for this. At this stage, only email and password. Ensure you add an auth secret to env.local. Users must sign up with an email and password before they can authenticate. Create the VIP page and a login/register button top right. 
-
-</aside>
-
+```
+We will now add a second page to the site, which is a private members area for VIP teachers only.
+This will be hidden behind user authentication. We will use next auth for this.
+At this stage, only email and password. Ensure you add an auth secret to env.local.
+Users must sign up with an email and password before they can authenticate.
+Create the VIP page and a login/register button top right. 
+```
 ### 2.5 Adding environment variables to Vercel
 
 Now, before we republish the page, we need to add the next auth env variable to Vercel for our authentication. Head to settings - environment variables, copy them from env.local and paste them into Vercel.
@@ -185,35 +166,27 @@ Ask Claude to restart the dev server and check authentication. O
 ### 2.6 Adding a capture details form with backend in Supabase
 
 Now we add our first backend service - Supabase. This will be to capture client details. 
-
-<aside>
-👨‍💻
-
-We will now add a guestbook to our site, so that users can see other comments on the site. We will also enable persistent user authentication. We will do this using a Supabase backend. Please set this up, including adding env.example with instructions for what variables you need from supabase. We will be calling the supabase project teacher-vip-97.
-
-</aside>
-
+```
+We will now add a guestbook to our site, so that users can see other comments on the site.
+We will also enable persistent user authentication. We will do this using a Supabase backend.
+Please set this up, including adding env.example with instructions for what variables you need from supabase.
+We will be calling the supabase project teacher-vip-97.
+```
 ### 2.7 Adding some AI - a helper chatbot
 
 Let’s now add a chatbot with a system prompt. We can either decide where we want this, or allow Claude to work out the optimal place on the page. System prompts specify the behaviour the bot will always show. In this case a harassed teacher:
-
-<aside>
-👨‍💻
-
-Now, inside the auth VIP page we want a chatbot. Consider the optimal place for this chatbot on the page and the optimal width for ease of use. The chatbot needs to behave like a harrassed teacher, so whatever we ask it needs to respond in the manner of a teacher who is trying to remain calm but whose patience is strained. We will be using Openrouter for this chatbot: we want to specify the API and model in environment variables. Ensure React Markdown is installed.
-
-</aside>
-
+```
+Now, inside the auth VIP page we want a chatbot.
+Consider the optimal place for this chatbot on the page and the optimal width for ease of use.
+The chatbot needs to behave like a harrassed teacher.
+Whatever we ask it needs to respond in the manner of a teacher who is trying to remain calm but whose patience is strained.
+We will be using Openrouter for this chatbot: we want to specify the API and model in environment variables.
+Ensure React Markdown is installed.
+```
 You can choose which AI model to use inside Openrouter. Test models that are free before committing. However, free models tend to glitch so it’s better just to add maybe £5 to credits. It’ll last you a long time if you’re just testing the cheaper models. 
 
-<aside>
-⚠️
-
-Before you commit and push the changes, ensure you add Supabase and Openrouter environment variables to Vercel, or the backend guestbook and chatbot won’t work. You can copy them as a block from env.local and paste them all at the same time into Vercel. 
-
-You can also use the Vercel CLI, but I prefer to do this bit manually. 
-
-</aside>
+Before you commit and push the changes, ensure you add Supabase and Openrouter environment variables to Vercel, or the backend guestbook and chatbot won’t work.
+You can copy them as a block from env.local and paste them all at the same time into Vercel. You can also use the Vercel CLI, but I prefer to do this bit manually. 
 
 ### 2.8 Debugging tools
 
@@ -242,14 +215,11 @@ Choose agents in the / menu and follow the instructions. You want all three to h
 
 ### 3.2 Claude’s agent teams
 
-You can spin up an agent team at any time. To enable, paste this URL into Claude with this prompt:
-
-<aside>
-👨‍💻
-
-Read this webpage and enable agent teams globally in Claude Code: https://code.claude.com/docs/en/agent-teams. Add the **CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS** setting to settings.json but do not overwrite the file. 
-
-</aside>
+You can spin up an agent team at any time. To enable, paste this into Claude:
+```
+Read this webpage and enable agent teams globally in Claude Code: https://code.claude.com/docs/en/agent-teams.
+Add the **CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS** setting to settings.json but do not overwrite the file. 
+```
 
 Agent teams are great for the following: 
 
@@ -296,18 +266,10 @@ For this project today, I would suggest the following:
 
 You can specify this from the very start and Gemini will factor this in, pushing back if what you suggest isn’t what it would recommend. You genuinely don’t need to understand any of this to a particular degree, as AI will lead the technical side. This is just a tech stack I’ve used a lot that I know works. 
 
-<aside>
-⚠️
-
 **IMPORTANT POINT**
-
 DO. NOT. WORRY. Things WILL go wrong. A lot. 
-
 At any time you can ask Claude to guide you step by step. Just say something like “I am not sure what to do next. Take me step by step, assuming no prior knowledge.” I did this a lot in the early days. And learned a lot. 
-
 When you’re building today, do this first if you get stuck or if errors appear. It’s a vital skill to learn.
-
-</aside>
 
 ### 3.4 Turning your planning docs into dev docs
 
@@ -344,13 +306,9 @@ You must always have a hyphen or underscore between words or they will be added 
 Add your PRD, architecture, UI/UX, Epics and story template files into the core folder.  You can find the story template in the Github repo.
 
 From here, we will be decomposing our epics file into story files. This is like the AI reading the chapter summary and turning it into completed sections. Add a prompt like this:
-
-<aside>
-👨‍💻
-
+```
 I want you to read the docs in /core. Use the scrum master agent to read the epics file, story-template and associated files and decompose Epic 1 into individual story files. Name these story files E1.1, E1.2 etc. Add these stories to docs/stories/todo.
-
-</aside>
+```
 
 Providing you have created the three agents above, this prompt will invoke the scrum master agent to create the first set of stories. Notice how I have asked it to create new folders. Having /todo and /completed inside /stories is very helpful, as it ensures you know where you are in the build. 
 
@@ -380,25 +338,18 @@ The moment of truth. And honestly, once you have the plan, you follow a pretty p
 ### 4.2 Automating the whole thing with a Skill
 
 You can literally build an automation for the whole process above (or any stepped process). Automations are called Skills. Drop this into Claude:
-
-<aside>
-👨‍💻
-
+```
 I want to build a Claude Skill for the below workflow. Add it to my .claude folder inside /skills so that all projects have access to it. Name it /story-to-code.
 
 1. Call up the story implementer agent to read the named story and write the code.
 2. Once complete, invoke the qa validator to check the story code quality and push back to the story implementer if there are errors.
 3. When passed, begin the [localhost](http://localhost) server on localhost:3000. If this port is in use, kill the current server and restart. Do not start on another port.
-</aside>
+```
 
 Restart Claude Code to access it. Then, add this prompt into Claude:
-
-<aside>
-👨‍💻
-
-/story-to-code story E1.1 
-
-</aside>
+```
+/story-to-code story E1.1
+```
 
 Or whatever you’ve called your story file.
 
