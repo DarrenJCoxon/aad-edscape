@@ -19,15 +19,14 @@ One of the first things that we're going to do is we're actually going to set up
 
 ## 1. Setting up the environment
 
-1. My setup with VS Code - why VS Code and not Cursor? Just preference - can use either. Quick familiarisation with the interface. File browser, preview, Terminal, Status bar at the bottom via View.
-2. Other preferences - Light and dark mode, turning off windows etc. 
-3. How to open a new session using File - New Window - Create a test folder on the desktop, drag it into VS Code. Explain why this is so important at the start - MUST be using Claude Code inside a project folder. 
-4. Show the other way to open a folder inside Terminal using cd and dragging in the folder. 
+1. Why VS Code and not Cursor? Just preference - you can use either. It's a simple interface - I break mine into three: File browser, preview, Terminal/Claude Code window.
+2. Other preferences - Light and dark mode - I set mine to mirror my system settings. 
+3. How to open a new session using File - New Window - Create a test folder on the desktop, drag it into VS Code. It's important to be using Claude inside project folders NOT inside your computer system files (unless you want it to check something in your system - but be careful). 
 
 ### Claude Code basics
 
-1. How to open Claude Code inside VS Code:
-    1. Inside the Terminal - Claude
+1. How to open Claude Code inside VS Code once Claude Code is installed:
+    1. Inside the Terminal - type Claude
     2. By adding the Claude extension (my preference for today)
 2. How to log into Claude - through the CLI / through the browser
 3. The various features of Claude Code, looking in the slash command and going through the most important features first. 
@@ -42,7 +41,7 @@ One of the first things that we're going to do is we're actually going to set up
 
 ### …And adding guardrails
 
-- Putting in protections from the start - add the 2 hooks prompts in github into Claude in Terminal - DO NOT WORRY if you cannot understand anything in this prompt - this is talking to Claude, not to us!
+- Putting in protections from the start - add the 2 hooks prompts you can see linked above (1.hooks-prompt.md) into Claude in Terminal - DO NOT WORRY if you cannot understand anything in this prompt - this is talking to Claude, not to us!
 - Why set this up from the start? Using skip permissions can result in Claude running destructive commands which can cause problems. This means we run it inside guardrails. This hook will also stop you from committing secrets in your codebase - critical!
 - The second hook ensures that all tests are done and passing before you commit. This is critical to avoid storing up technical debt, which is a key risk with AI coding.
 - Just copy from GH and paste into claude in Terminal in the root - open this up via VS Code.
