@@ -11,9 +11,9 @@ The main difference between Claude Code and the chatbots that you will have more
 
 These are commands that you would normally type yourself into the terminal but Claude can do most of them on your behalf.
 
-This takes a bit of getting used to. When we are first starting, we might feel that we are potentially going to be doing some quite dangerous things inside of our computer. That somehow AI might take things over and break things. There are some dangers and I'm going to talk about those dangers as we go through the day.
+This takes a bit of getting used to. When we first start, we might feel that we are going to do some quite dangerous things inside our computer. That somehow AI might take things over and break things. There are some dangers and I'm going to talk about those dangers as we go through the day.
 
-One of the first things that we're going to do is we're actually going to set up the coding environment even before we begin to code. We need to make sure that the environment is properly set up. This should give you the assurance that what we're going to be doing is safe and secure. It means that you can be a lot more experimental and really push things further, knowing that Claude can't really do anything too bad.
+The first thing we will do is set up our coding environment before we begin to code. This is important, and should give you the assurance that what we're going to be doing is safe and secure. It means that you can be a lot more experimental and really push things further, knowing that Claude can't really do anything too bad.
 
 **IMPORTANT**: A lot of what we will do this morning will not be coding - we are going to ensure we have the optimal environment to get the most out of Claude Code.
 
