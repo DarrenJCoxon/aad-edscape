@@ -1,5 +1,15 @@
 ## Introduction
 
+### Useful links:
+VS Code - https://code.visualstudio.com/
+Claude Code - https://code.claude.com/docs/en/overview
+Node (for npm) - https://nodejs.org/en/download
+Github install - https://git-scm.com/install/
+Vercel - https://vercel.com/
+Supabase (database) - https://supabase.com/
+Openrouter (for any AI in your app) - https://openrouter.ai/
+AI Studio (for our planning) - https://ai.dev
+
 ### How does Claude Code differ from AI chatbots like ChatGPT and Gemini?
 
 The main difference between Claude Code and the chatbots that you will have more likely used is that not only will Claude write an output but it will also carry out actions on your computer. When we're coding this means that it will:
